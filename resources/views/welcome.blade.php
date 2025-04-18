@@ -19,7 +19,7 @@
         <h4 class="mb-0">Responsive Form</h4>
       </div>
       <div class="card-body">
-        <form action={{ route('view-user') }} method="POST" >
+        <form action={{ route('all-users') }} method="POST" >
           @csrf
           <div class="mb-3">
             <label for="inputEmail" class="form-label">Email</label>
