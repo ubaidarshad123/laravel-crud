@@ -19,11 +19,11 @@
         <h4 class="mb-0">Responsive Form</h4>
       </div>
       <div class="card-body">
-        <form action={{ route('all-users') }} method="POST" >
+        <form action={{ route('view-user') }} method="POST" >
           @csrf
           <div class="mb-3">
             <label for="inputEmail" class="form-label">Email</label>
-            <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+            <input name="email" type="email" class="form-control" value="{{ old('email') }}" id="inputEmail" placeholder="Enter your email">
             @error('email')
             <font color='red'>{{ $message }}</font>
         @enderror

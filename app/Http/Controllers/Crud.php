@@ -15,7 +15,6 @@ class Crud extends Controller
             'password' => 'required|string|min:8',
             'address' => 'required',
             'city' => 'required',
-            'city' => 'required',
         ]);
 
         $student = new student();
@@ -25,6 +24,11 @@ class Crud extends Controller
         $student->city = $request->city;
         $student->state = $request->state;
         $student->save();
-        return redirect()->view('view_data');
+        return redirect()->route('view.all');
+    }
+
+    public function index()
+    {
+        return view('view_data');
     }
 }

@@ -8,8 +8,8 @@ Route::get('/', function () {
 });
 
 
-Route::post('view',[Crud::class , 'create'])->name('view-user');
+Route::post('view', [Crud::class, 'create'])->name('view-user');
+Route::get('all-users', [Crud::class, 'index'])->name('view.all')
 
 
-
-?>
+    ?>
